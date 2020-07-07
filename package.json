@@ -6,9 +6,10 @@
         "svelte",
         "starter",
         "template",
+        "netlify",
         "prettier"
     ],
-    "homepage": "https://github.com/bradgarropy/svelte-starter#readme",
+    "homepage": "https://cybernetic-starter.netlify.app",
     "bugs": {
         "url": "https://github.com/bradgarropy/svelte-starter/issues"
     },
