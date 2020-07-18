@@ -1,6 +1,6 @@
 {
     "name": "svelte-starter",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "🤖 cybernetically enhanced svelte starter",
     "keywords": [
         "svelte",
@@ -28,7 +28,9 @@
         "start": "rollup -c --watch",
         "build": "rollup -c"
     },
-    "dependencies": {},
+    "dependencies": {
+        "svelte-routing": "^1.4.2"
+    },
     "devDependencies": {
         "@rollup/plugin-html": "^0.2.0",
         "@rollup/plugin-node-resolve": "^8.1.0",
