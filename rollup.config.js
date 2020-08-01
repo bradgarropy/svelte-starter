@@ -21,7 +21,7 @@ const config = {
         process.env.ROLLUP_WATCH &&
             serve({
                 contentBase: path,
-                port: 8000,
+                port: 5000,
                 historyApiFallback: true,
             }),
         process.env.ROLLUP_WATCH && livereload(path),
