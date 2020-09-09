@@ -1,7 +1,9 @@
 import copy from "rollup-plugin-copy"
-import html from "@rollup/plugin-html"
 import serve from "rollup-plugin-serve"
 import svelte from "rollup-plugin-svelte"
+import replace from "rollup-plugin-replace"
+import {terser} from "rollup-plugin-terser"
+import commonjs from "@rollup/plugin-commonjs"
 import resolve from "@rollup/plugin-node-resolve"
 import livereload from "rollup-plugin-livereload"
 
@@ -15,9 +17,11 @@ const config = {
     },
     plugins: [
         svelte({dev: process.env.ROLLUP_WATCH}),
-        resolve(),
-        html(),
+        resolve({browser: true}),
+        // replace({}),
+        commonjs(),
         copy({targets: [{src: "static/*", dest: path}]}),
+        !process.env.ROLLUP_WATCH && terser(),
         process.env.ROLLUP_WATCH &&
             serve({
                 contentBase: path,
